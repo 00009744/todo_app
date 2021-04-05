@@ -10,6 +10,13 @@ app.get('/create', (req, res) => {
     res.render('create')
 })
 
+
+const tasks = ['Some', 'Some 2']
+
+app.get('/tasks', (req, res) => {
+    res.render('tasks', { tasks: tasks })
+})
+
 // localhost:5000
 app.get('/', (req, res) => {
     res.render('mainpage')

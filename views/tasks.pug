@@ -1,0 +1,11 @@
+extends layout.pug 
+
+block content
+  div.contain
+    h1 All tasks 
+
+    each task in tasks
+      div.task-wrapper
+        a.task(href='#')= task 
+        a.remove(href='#') remove task
+    

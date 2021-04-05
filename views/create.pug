@@ -1,15 +1,14 @@
 extends layout.pug 
 
-
 block content
   div.container
-    h1 Create a task
+    h2 Create a task 
 
     form.form(action="/create" method='POST')
-      label Title 
-      input.input(type="text" name="title")
+      label Responsible person for the task
+      input.input(type="text" name="title" placeholder="Name...")
 
-      label Description
-      textarea.input(name="text" name="description") 
+      label Task description
+      textarea.input(type="text" name="description" value="task" placeholder="Task...")
 
-      button.btn Create a task
+      button.button Create task
