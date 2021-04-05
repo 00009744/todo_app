@@ -1,0 +1,15 @@
+extends layout.pug 
+
+
+block content
+  div.container
+    h1 Create a task
+
+    form.form(action="/create" method='POST')
+      label Title 
+      input.input(type="text" name="title")
+
+      label Description
+      textarea.input(name="text" name="description") 
+
+      button.btn Create a task
