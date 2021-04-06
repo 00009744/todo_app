@@ -66,6 +66,21 @@ app.get('/api/v1/tasks', (req, res) => {
 })
 
 
+app.get('/:id/delete', (req, res) => {
+    const id = req.params.id
+
+    fs.readFile('./db/tasks.json', (err, db) => {
+        if (err) throw err
+
+        const tasks = JSON.parse(db)
+        const filteredtasks = tasks.filter(task => task.id != id)
+        fs.writeFile('./db/tasks.json', JSON.stringify(filteredtasks), (err) => {
+            if (err) throw err
+
+            res.render('tasks', { tasks: filteredtasks, delete: true })
+        })
+    })
+})
 
 
 app.get('/tasks/:id', (req, res) => {

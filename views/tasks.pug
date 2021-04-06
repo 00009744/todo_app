@@ -10,5 +10,5 @@ block content
     each task in tasks
       div.task-wrapper
         a.task(href=`/tasks/${ task.id }`) #{ task.name }
-        a.remove(href='#') remove task
+        a.remove(href=`/${ task.id }/delete`) remove task
     
