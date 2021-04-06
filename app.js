@@ -56,8 +56,18 @@ app.get('/tasks', (req, res) => {
 
 
 
-app.get('/tasks/detail', (req, res) => {
-    res.render('detail')
+app.get('/tasks/:id', (req, res) => {
+    const id = req.params.id
+
+    fs.readFile('./db/tasks.json', (err, db) => {
+        if (err) throw err
+
+        const tasks = JSON.parse(db)
+
+        const task = tasks.filter(task => task.id == id )[0]
+
+        res.render('detail', { task: task})
+    })
 })
 
 // localhost:5000

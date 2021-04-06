@@ -105,7 +105,7 @@ h2 {
 .task-wrapper {
   border-radius: 5px;
   border: 2px solid black;
-  max-width: 60%;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -115,7 +115,7 @@ h2 {
 }
 
 .contain {
-  max-width: 1000px;
+  max-width: 70vw;
   margin: 0 auto;
   padding: 10px;
 }
@@ -124,6 +124,7 @@ h2 {
 }
 .task {
   font-size: 30px;
+  display: block;
 }
 
 .remove {
