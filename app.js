@@ -1,3 +1,4 @@
+const { json } = require('body-parser')
 const express = require('express')
 const app = express()
 
@@ -54,6 +55,15 @@ app.get('/tasks', (req, res) => {
     })
 })
 
+
+app.get('/api/v1/tasks', (req, res) => {
+    fs.readFile('./db/tasks.json', (err, db) => {
+        if (err) throw err
+
+        const tasks = JSON.parse(db)
+        res.json(tasks)
+    })
+})
 
 
 app.get('/tasks/:id', (req, res) => {
