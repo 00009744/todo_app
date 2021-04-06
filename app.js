@@ -10,7 +10,7 @@ app.set('view engine', 'pug')
 app.use('/static', express.static('public'))
 app.use(express.urlencoded({ extended: false }))
 
-
+//  here is create operation
 app.post('/create', (req, res) => {
     const name = req.body.name
     const description = req.body.description
@@ -40,11 +40,13 @@ function id (){
     return '_' + Math.random().toString(36).substr(2, 9);
 }
 
+// creates a new task
 app.get('/create', (req, res) => {
     res.render('create')
 })
 
 
+// takes to tasks page
 app.get('/tasks', (req, res) => {
 
     fs.readFile('./db/tasks.json', (err, db) => {
@@ -55,7 +57,7 @@ app.get('/tasks', (req, res) => {
     })
 })
 
-
+// here is given url endpoint 
 app.get('/api/v1/tasks', (req, res) => {
     fs.readFile('./db/tasks.json', (err, db) => {
         if (err) throw err
@@ -65,7 +67,7 @@ app.get('/api/v1/tasks', (req, res) => {
     })
 })
 
-
+// here is delete operation
 app.get('/:id/delete', (req, res) => {
     const id = req.params.id
 
@@ -82,7 +84,7 @@ app.get('/:id/delete', (req, res) => {
     })
 })
 
-
+// thie operation takes to detail iformation about the task
 app.get('/tasks/:id', (req, res) => {
     const id = req.params.id
 
