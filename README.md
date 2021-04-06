@@ -7,7 +7,7 @@ In order to run the web application locally, user should follow the instructions
 1. Clone the repository
 
 ```bash
-git clone link [https://github.com/00009744/todo_app]
+git clone link: https://github.com/00009744/todo_app
 ```
 
 2. Going to the exact folder(main) and installing dependencies
