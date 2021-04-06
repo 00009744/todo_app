@@ -17,8 +17,12 @@ app.get('/tasks', (req, res) => {
     res.render('tasks', { tasks: tasks })
 })
 
+app.get('/tasks/detail', (req, res) => {
+    res.render('detail')
+})
+
 // localhost:5000
-app.get('/', (req, res) => {
+app.get('/mainpage', (req, res) => {
     res.render('mainpage')
 })
 

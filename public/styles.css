@@ -138,3 +138,14 @@ h2 {
   color: white;
   opacity: 80%;
 }
+
+/* task detail */
+.contains {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.title {
+  margin-bottom: 15px;
+  font-size: 40px;
+}
