@@ -4,9 +4,14 @@ block content
   div.container
     h2 Create a task 
 
+    if error
+      p.error Please, fill in the empty space!
+    if success
+      p.success Task was created!
+
     form.form(action="/create" method='POST')
       label Responsible person for the task
-      input.input(type="text" name="title" placeholder="Name...")
+      input.input(type="text" name="name" placeholder="Name...")
 
       label Task description
       textarea.input(type="text" name="description" value="task" placeholder="Task...")
