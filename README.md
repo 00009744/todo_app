@@ -30,4 +30,5 @@ node app or node app.js
 
 ### Web App`s repository link on github
 
-[link to github repository](https://github.com/00009744/todo_app.git)
+- [link to github repository](https://github.com/00009744/todo_app.git)
+- [Glitch link](https://todo-app9744.glitch.me/)
