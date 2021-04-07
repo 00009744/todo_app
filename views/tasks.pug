@@ -6,9 +6,11 @@ block content
     
     if deleted
       p.success Task was deleted!
- 
-    each task in tasks
-      div.task-wrapper
-        a.task(href=`/tasks/${ task.id }`) #{ task.name }
-        a.remove(href=`/${ task.id }/delete`) remove task
+    if tasks.length
+      each task in tasks
+        div.task-wrapper
+          a.task(href=`/tasks/${ task.id }`) #{ task.name }
+          a.remove(href=`/${ task.id }/delete`) remove task
+    else 
+      h2 No tasks available! 🤔
     
