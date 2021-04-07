@@ -172,3 +172,10 @@ h2 {
   font-size: 18px;
   color: green;
 }
+
+/* footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  margin: 2rem 15rem;
+}
