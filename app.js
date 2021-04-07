@@ -79,7 +79,7 @@ app.get('/:id/delete', (req, res) => {
         fs.writeFile('./db/tasks.json', JSON.stringify(filteredtasks), (err) => {
             if (err) throw err
 
-            res.render('tasks', { tasks: filteredtasks, delete: true })
+            res.render('tasks', { tasks: filteredtasks, deleted: true })
         })
     })
 })

@@ -4,9 +4,9 @@ block content
   div.contain
     h1 All tasks 
     
-    //- if deleted 
-    //-   p.success Task was deleted!
-
+    if deleted
+      p.success Task was deleted!
+ 
     each task in tasks
       div.task-wrapper
         a.task(href=`/tasks/${ task.id }`) #{ task.name }

@@ -150,7 +150,9 @@ h2 {
   margin-bottom: 15px;
   font-size: 40px;
 }
-
+.description {
+  white-space: pre-wrap;
+}
 /* creating task respond style */
 .error {
   display: inline-block;
